@@ -1,0 +1,646 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:avenir;
+    src: url("fonts/Avenir-Font/Avenir_LT_35_Light.ttf");
+
+    font-family: fraunces ;
+    src: url("fonts/Fraunces_120pt-Light/Fraunces_120pt-Light.ttf");
+}
+
+body,.a_propos,.pays{
+    font-family: avenir, sans-serif;
+    margin: 0 ;
+    font-size: 18px;
+    color: black;
+    line-height: 1.6em;
+}
+
+/*********fonnd acceuil****************/
+
+header{
+    /*background-image: url("image/fond_maroc.jpg");*/
+    background-size:100% ;
+    background-attachment: fixed;
+    width: 100%;
+    height: 780px;
+    animation-name: diapo;
+    animation-duration: 10s ;
+    animation-fill-mode: both;
+    animation-timing-function: end;
+
+}
+
+
+@keyframes diapo {
+    0%{
+    background-image: url("image/fond_maroc.jpg");
+    background-position: center;
+    }
+
+    100%{
+    background-image: url("image/fond_maroc.jpg");
+    background-position: top;
+    }
+}
+
+/*
+@keyframes diapo {
+    0%{
+    background-image: url("image/fond1.jpg");
+    background-position: center;
+    }
+
+    100%{
+    background-image: url("image/fond1.jpg");
+    background-position: top;
+    }
+}
+*/
+
+
+/************ navigation *****************/
+
+.top_bar{
+    width: 100%;
+    height: 100px;
+}
+
+.top_bar nav{
+    float: right;
+    margin-right: 30px;
+    margin-top: 40px;
+}
+
+.top_bar:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: solid 2px black;
+}
+
+
+.top_bar nav a{
+    padding-top: 8px;
+    margin-right: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.top_bar nav a:hover{
+    border-top: solid 2px black;
+}
+
+.top_bar .form {
+    float: left;
+    margin-left: 20px;
+    margin-top: 25px;
+    padding:10px;
+    color: rgb(0, 0, 0);
+    border: solid 1px rgb(0, 0, 0);
+}
+
+.top_bar .form a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.top_bar .form:hover{
+    background-color: rgba(255, 255, 255, 0.389);
+    border: solid 3px;
+
+}
+
+
+/************* TITRE*************************/
+
+.centre h1{
+    text-align: center;
+    font-size: 115px;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+
+    margin: 50px;
+    line-height: 100%;
+}
+
+.centre h2{
+    text-align: center;
+    font-size: 16px;
+    font-family: avenir, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+
+    margin: 40px;
+}
+
+.centre{
+    position: relative;
+    top:70px;
+}
+
+/********************** Prentation**********************************/
+
+.presentation{
+    overflow:hidden;
+    height: 500px;
+    background-color: #DCF2F0;
+    text-align: center;
+}
+
+.presentation .V {
+    position:relative;
+    top: 65px;
+}
+
+.presentation .V h2{
+    font-family: 'Caudex', serif;
+}
+
+
+.presentation p{
+    padding-left: 30%;
+    padding-right: 30%;
+    left:400px;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.tem{
+    /*border: solid 1px black;*/
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 14px;
+
+    margin-left: 20px;
+    margin-top: 40px;
+    padding:10px;
+
+}
+
+.tem:hover{
+    background-color: black ;
+    color: white;
+    border: solid 1px white;
+}
+
+.prof{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    border: solid 1px black;
+    font-size: 14px;
+
+    margin-left: 20px;
+    margin-top: 40px;
+    padding:10px 15px 10px 15px;
+}
+
+.prof:hover{
+    border: solid 3px ;
+}
+
+/**************** defilement ************************/
+
+.cases{
+    background-color: rgb(255, 255, 255);
+    height: 625px;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cases h2{
+    font-family: 'Caudex', serif;
+    margin-top: 50px;
+}
+
+.recent .tem_recent h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: caudex, sans-serif;
+    font-size: 25px;
+
+}
+
+.recent .tem_recent h4{
+    margin:10px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    font-family: avenir, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.recent .tem_recent p{
+    font-size: 17px;
+    margin: 5px;
+}
+
+
+.recent{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+    margin-top: 20px ;
+    padding-bottom: 50px;
+}
+
+.recent .tem_recent, .recent .tem_recent .a{
+    text-decoration: underline white;
+    color: black;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    border:solid rgb(0, 0, 0);
+    border-radius: 8%;
+    margin: 30px 20px 30px 20px;
+}
+
+/*
+.recent .tem_recent h4{
+    text-decoration: none;
+    color: black;
+}
+
+.recent .tem_recent p{
+    text-decoration: underline white;
+    color: black;
+}
+*/
+
+.recent .tem_recent .drapeau{
+    margin-top: 30px;
+}
+
+.recent::-webkit-scrollbar {
+    width: 10px;
+    height: 15px;
+    border-radius: 5%;
+    background-color: #000000;
+}
+
+.recent::-webkit-scrollbar-thumb {
+    background: #bf0436;
+}
+
+
+/********************** footer ********************************/
+
+footer{
+    overflow: hidden;
+    position: static;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    height: 50px;
+
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;
+
+}
+
+
+footer .lien{
+    text-align: center;
+    margin: 15px;
+}
+
+footer .lien a{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+footer .lien a:hover{
+    border-top: solid 1px white;
+}
+
+footer .lien a::before{
+    content: "🔗";
+}
+
+/*************************************************************************************************************************************************/
+
+/********************** À Propos et Redirection *************************/
+
+.a_propos,.redirection{
+    background-image: url("image/fond_maroc.jpg");
+    text-align: center;
+
+}
+
+.a_propos h1, .redirection h1{
+    font-family: fraunces, serif;
+}
+
+.a_propos .centre_a_propos{
+    margin: 100px 200px 100px 200px;
+    padding: 80px;
+    border: solid 1px;
+    border-radius: 10%;
+}
+
+.redirection .centre_redirection{
+    margin: 100px 200px 100px 200px;
+    padding: 80px;
+    border-radius: 10%;
+}
+
+.a_propos .centre_a_propos a, .redirection .centre_redirection a{
+    text-decoration: none;
+    color:rgb(19, 19, 19);
+    border-bottom: solid rgb(19, 19, 19);
+    padding-top: 15px;
+    margin-right: 20px;
+}
+
+.a_propos .centre_a_propos a:hover, .redirection .centre_redirection a:hover{
+    color: rgb(62, 62, 62);
+    border-bottom: solid rgb(62, 62, 62);
+}
+
+
+/******************************************************************************************************************************************************************************/
+
+/****************************** CHOIX PAYS ********************************************/
+
+.pays{
+    /*background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("image/fond_maroc.jpg");*/
+    background-image: url("image/fond_maroc.jpg");
+    color: rgb(0, 0, 0);
+
+}
+/*
+.pays .top_bar nav a{
+    color: rgb(255, 255, 255);
+}
+
+.pays .top_bar .form {
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 255, 255);
+}
+
+.pays .top_bar .form a{
+    color: white;
+}
+
+.pays .top_bar:hover{
+    background-color: black;
+}
+*/
+
+.pays .ordre h2{
+    font-family: fraunces, serif;
+    margin: 40px 10px 0px 15px;
+}
+
+
+
+.lien_pays {
+    margin:10px 0px 10px 0;
+    padding: 10px 20px 5px 20px;
+    border-bottom: solid rgb(0, 0, 0) 1px;
+
+}
+
+
+.lien_pays a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: avenir, sans-serif;
+    margin: 0 ;
+    font-size: 18px;
+}
+
+.lien_pays a h4{
+    letter-spacing: 2px;
+    color: black;
+    font-weight: 100;
+    text-transform: uppercase;
+
+}
+
+.lien_pays a h4:hover{
+   color: #000000ca;
+   font-size: 20px;
+}
+
+/********************************************** liste_temoignage  *****************************************************************/
+
+.titre h1{
+    font-family: fraunces, serif;
+    text-align: center;
+    font-weight: lighter;
+    margin: 60px 5px 20px auto ;
+}
+
+
+.titre p{
+    font-family: avenir, serif;
+    text-align: center;
+    font-weight: lighter;
+    margin: 20px 5px 40px auto ;
+    letter-spacing: 1px;
+}
+
+.temoignage{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("image/fond_maroc.jpg") ;
+
+    /*background-image: url("image/fond_maroc.jpg");*/
+}
+.article{
+    width: 350px;
+    height: 200px;
+    margin: 35px;
+    border: solid 1px black;
+}
+
+.liste_temoignage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.liste_temoignage a{
+    text-decoration: none;
+    color: black;
+    text-align: center ;
+}
+
+.article h2{
+    margin-top: 20px;
+    font-family: fraunces, sans-serif;
+}
+
+.article h6{
+    margin: 20px 0 0 0;
+    font-family: avenir,sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase ;
+}
+
+.article p{
+    font-size: 14px;
+    font-family: avenir, sans-serif;
+    margin: auto 20px auto 20px;
+}
+
+/******************* le temoignage en question ******************************/
+
+.qr_temoignage{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("image/mur.jpg") ;
+    background-size: auto 100%;
+}
+
+.qr_temoignage .top_bar{
+    border-bottom: solid black 2px;
+}
+
+.tem_titre{
+    text-align: center;
+    margin: 50px auto 80px auto;
+}
+
+.tem_titre h1 {
+    font-size: 90px;
+    font-family: fraunces, serif;
+    font-weight: 100;
+    line-height: 100%;
+    margin-top: 10px ;
+    margin-bottom: 25px;
+}
+
+.tem_titre h4 {
+    font-weight: lighter;
+    letter-spacing: 3px;
+    font-family: avenir, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.tem_titre h2 {
+    font-weight: 300;
+    font-family: caudex, sans-serif;
+    font-size: 25px;
+}
+
+.qr{
+    margin: 40px 25px 40px 25px;
+}
+
+.qr h3{
+    font-family: caudex, serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.qr p{
+    font-family: avenir, sans-serif;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 17px;
+    line-height: 32px;
+}
+
+/***********************************************   RESPONSIVE    *************************************************************************************/
+
+@media screen and (max-width:680px){
+    .centre h1{
+        font-size: 85px;
+    }
+
+    .presentation{
+        height: 675px;
+    }
+
+    .presentation p{
+        padding-left: 10%;
+        padding-right: 10%;
+        left:400px;
+        margin-bottom: 30px;
+    
+        font-size: 18px;
+    }
+
+    .lien_pre{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prof , .tem{
+        margin: 10px 30px 10px 30px;
+    }
+
+    .top_bar nav a, .top_bar .form a{
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .footer .lien a{
+        margin:5px;
+    }
+
+    .a_propos .centre_a_propos, .redirection .centre_redirection{
+        margin: 20% 5% 20% 5%;
+        padding: 5px;
+        border: none;
+        font-size: 15px;
+    }
+}
+
+
+
+@media screen and (max-width:1050px) and (min-width:680px){
+    .presentation{
+        height: 450px;
+    } 
+
+    .presentation p{
+        padding-left: 10%;
+        padding-right: 10%;
+        left:400px;
+        margin-bottom: 30px;
+    
+        font-size: 16px;
+    }
+
+    .a_propos .centre_a_propos, .redirection .centre_redirection{
+        margin: 20% 5% 20% 5%;
+        padding: 10px;
+        border: none;
+        font-size: 18px;
+    }
+
+    header{
+        animation-duration: 5s ;
+    }
+
+    @keyframes diapo {
+        0%{
+        background-image: url("image/fond_maroc.jpg");
+        background-position: bottom;
+        }
+    
+        100%{
+        background-image: url("image/fond_maroc.jpg");
+        background-position: top;
+        }
+    }
+    
+}
