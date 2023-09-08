@@ -6,6 +6,8 @@
     <title>Pays | Témoignages-Hijra</title>
 
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +18,22 @@
 
 <body class="pays">
 
-    <section class="top_bar">
+    <section class="nav_bar">
+            
+        <a href="redirection.html" class="form">Partager mon expérience</a>
 
-        <div class="form">
-            <a href="redirection.html">Partager mon expérience</a>
-        </div>
-
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="liste_pays.html">Pays</a>
-            <a href="a_propos.html">À Propos</a>
+        <nav class="lien_nav">
+            <ul>
+                <li> <a href="index.html" >Accueil</a> </li> 
+                <li> <a href="liste_pays.html" class="active">Pays</a> </li>
+                <li> <a href="a_propos.html">À Propos</a> </li>
+            </ul>
         </nav>
 
+        <img src="image/menu.png" class="menu">
+
     </section>
+
 
     <section class="ordre">
         
@@ -158,5 +163,16 @@
 
     </section>
 
+
 </body>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu")
+        const navLinks = document.querySelector("nav")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
 </html>

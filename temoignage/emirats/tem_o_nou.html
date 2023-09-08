@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="**********************************">
-    <title>Sharjah, Oumou Nourah | Témoignages-Hijra</title>
+    <title>Sharjah, Oumou Nourrah | Témoignages-Hijra</title>
 
     <link rel="stylesheet" href="../../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +17,21 @@
 </head>
 
 <body class="qr_temoignage">
+    <a href="./tem_o_nou.html" class="haut"><img src="../../image/top.png"></a>
 
-    <section class="top_bar">
+    <section class="nav_bar">
+            
+        <a href="../../redirection.html" class="form">Partager mon expérience</a>
 
-        <div class="form">
-            <a href="../../redirection.html">Partager mon expérience</a>
-        </div>
-
-        <nav>
-            <a href="../../index.html">Accueil</a>
-            <a href="../../liste_pays.html">Pays</a>
-            <a href="../../a_propos.html">À Propos</a>
+        <nav class="lien_nav">
+            <ul>
+                <li> <a href="../../index.html" >Accueil</a> </li> 
+                <li> <a href="../../liste_pays.html" class="active">Pays</a> </li>
+                <li> <a href="../../a_propos.html">À Propos</a> </li>
+            </ul>
         </nav>
+
+        <img src="../../image/menu.png" class="menu">
 
     </section>
 
@@ -35,11 +40,11 @@
         <div class="tem_titre">
             <h4>Témoignage</h4>
             <H1>Hijra à Sharjah</H1>
-            <h2>Oumou Nourah</h2>
+            <h2>Oumou Nourrah</h2>
         </div>
 
         <div class="qr">
-            <h3 class="question">À quel moment avez-vous effectué la hijra, et l'avez-vous fait seul ou accompagné ?</h3>
+            <h3 class="question"><br><br>Quand avez-vous effectué la hijra, et l'avez-vous fait seul ou accompagné ?</h3>
             <p class="reponse">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, similique quis. Repellendus soluta nam quibusdam molestias voluptatum facere. Officia soluta amet ipsam veniam delectus recusandae necessitatibus reiciendis, totam labore autem.</p>
         </div>
 
@@ -176,4 +181,13 @@
 
 
 </body>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu")
+        const navLinks = document.querySelector("nav")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </html>

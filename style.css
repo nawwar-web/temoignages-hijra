@@ -1,4 +1,8 @@
 *{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -10,29 +14,21 @@
     src: url("fonts/Fraunces_120pt-Light/Fraunces_120pt-Light.ttf");
 }
 
-body,.a_propos,.pays{
+body{
     font-family: avenir, sans-serif;
-    margin: 0 ;
-    font-size: 18px;
-    color: black;
-    line-height: 1.6em;
 }
 
-/*********fonnd acceuil****************/
-
 header{
-    /*background-image: url("image/fond_maroc.jpg");*/
-    background-size:100% ;
-    background-attachment: fixed;
+    height: 100vh;
     width: 100%;
-    height: 780px;
+    background-attachment: fixed;
     animation-name: diapo;
     animation-duration: 10s ;
     animation-fill-mode: both;
     animation-timing-function: end;
 
+    overflow: hidden;
 }
-
 
 @keyframes diapo {
     0%{
@@ -46,164 +42,276 @@ header{
     }
 }
 
-/*
-@keyframes diapo {
-    0%{
-    background-image: url("image/fond1.jpg");
-    background-position: center;
-    }
+/*************************************** nav bar *********************************************/
 
-    100%{
-    background-image: url("image/fond1.jpg");
-    background-position: top;
-    }
-}
-*/
-
-
-/************ navigation *****************/
-
-.top_bar{
+.nav_bar{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
     width: 100%;
-    height: 100px;
+    padding: 40px;
+    top:0px;
 }
 
-.top_bar nav{
-    float: right;
-    margin-right: 30px;
-    margin-top: 40px;
-}
-
-.top_bar:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+.nav_bar:hover{
+    background-color: rgba(255, 255, 255, 0.9);
     border-bottom: solid 2px black;
 }
 
-
-.top_bar nav a{
-    padding-top: 8px;
-    margin-right: 20px;
-    justify-content: space-between;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.top_bar nav a:hover{
+.nav_bar nav a:hover{
     border-top: solid 2px black;
 }
 
-.top_bar .form {
-    float: left;
-    margin-left: 20px;
-    margin-top: 25px;
-    padding:10px;
-    color: rgb(0, 0, 0);
-    border: solid 1px rgb(0, 0, 0);
+
+.nav_bar nav ul{
+    display: flex;
+    justify-content: space-between;
 }
 
-.top_bar .form a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+.nav_bar nav ul li{
+    margin: 0 30px;
 }
 
-.top_bar .form:hover{
-    background-color: rgba(255, 255, 255, 0.389);
-    border: solid 3px;
+.nav_bar nav ul li a{
+    padding-top: 10px ;
+    position: relative;
+    top: 15px;
+}
+
+.form{
+    border: solid black 1px;
+    padding: 15px;
+}
+
+.nav_bar nav ul li a, .form {
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: 100%;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nav_bar nav ul li .active{
+    border-top: solid 1px black;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    left: 27px;
+    top: 17px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.mobile-menu{
+    margin-left: 0;
+}
+
+
+@media screen and (max-width: 900px) {
+    nav{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(7px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: -100%;
+        transition: all 1s ease;
+
+
+    }
+
+    nav.mobile-menu{
+        margin-left: 0;
+        z-index: 3;
+    }
+
+    .nav_bar nav ul li{
+        margin: 25px 0;
+        font-size: 18px;
+        text-transform:uppercase ;
+    }
+
+    .nav_bar nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .nav_bar{
+        padding: 20px;
+    }
+
+    .form{
+        position: absolute;
+        right: 25px;
+    }
+
+    .nav_bar:hover{
+        background-color: rgba(255, 255, 255, 0);
+        border-bottom: none;
+    }
 
 }
 
 
-/************* TITRE*************************/
+/*************************************************************** TITRE********************************************************/
+
+header .centre{
+    text-align: center;
+    position: relative;
+    top:30vh;
+
+}
 
 .centre h1{
-    text-align: center;
+    margin: 20px;
+    line-height: 100%;
+    
     font-size: 115px;
     font-family: 'Fraunces', serif;
     font-weight: 500;
-
-    margin: 50px;
-    line-height: 100%;
 }
 
 .centre h2{
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-family: avenir, sans-serif;
     font-weight: lighter;
     letter-spacing: 1px;
 
-    margin: 40px;
+    margin: 30px;
+
 }
 
-.centre{
-    position: relative;
-    top:70px;
+
+@media screen and (max-width: 900px) {
+    .centre h1{
+        margin: 20px;
+        line-height: 100%;
+        font-size: 70px;
+    }
 }
 
-/********************** Prentation**********************************/
+/***************************************************** PRESENTATION *****************************************************************/
 
 .presentation{
-    overflow:hidden;
-    height: 500px;
-    background-color: #DCF2F0;
+    background-color: #E5DBD9/*#E6DFD5*/;
+    height: 60vh;
     text-align: center;
 }
 
-.presentation .V {
+.presentation .text {
     position:relative;
-    top: 65px;
+    top: 120px;
 }
 
-.presentation .V h2{
+.presentation .text h2{
     font-family: 'Caudex', serif;
+    font-size: 25px;
 }
 
+.presentation .text p{
+    font-size: 18px;
+    font-weight: 400;
+    font-stretch: 100%;
+    line-height: 150%;
+    color: black;
 
-.presentation p{
-    padding-left: 30%;
-    padding-right: 30%;
-    left:400px;
-    margin-bottom: 30px;
-
-    font-size: 14px;
-    font-weight: lighter;
-    letter-spacing: 1px;
+    margin: 30px 200px;
 }
 
-.tem{
-    /*border: solid 1px black;*/
-    background-color: #ffffff;
-    text-decoration: none;
+@media screen and (max-width:900px){
+
+    .presentation{
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .presentation .text {
+        top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+
+    .presentation{
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    .presentation .text {
+        top: 60px;
+    }
+
+    .presentation .text p{
+        margin: 30px 40px
+    }
+
+} 
+
+
+/** lien presentation **/
+
+.tem, .prof{
     text-transform: uppercase;
     color: black;
     font-size: 14px;
 
-    margin-left: 20px;
-    margin-top: 40px;
-    padding:10px;
+    padding: 10px;
+    margin-right: 30px;
+}
 
+.tem{
+    background-color: white;
 }
 
 .tem:hover{
-    background-color: black ;
-    color: white;
-    border: solid 1px white;
+    background-color: black;
+    color:white;
 }
 
 .prof{
-    text-decoration: none;
-    text-transform: uppercase;
-    color:black;
-    border: solid 1px black;
-    font-size: 14px;
-
-    margin-left: 20px;
-    margin-top: 40px;
-    padding:10px 15px 10px 15px;
+    border: solid 1px black; 
 }
 
 .prof:hover{
-    border: solid 3px ;
+    border: solid black 3px ;
+}
+
+@media screen and (max-width: 900px) {
+
+    .lien_pre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tem, .prof{
+        padding: 10px;
+        width: 70vw;
+        margin-right: 0;
+    }
+
+    .prof{
+        margin-top: 15px;
+    }
+
 }
 
 /**************** defilement ************************/
@@ -231,7 +339,7 @@ header{
 }
 
 .recent .tem_recent h4{
-    margin:10px;
+    margin-top: 20px;
     font-weight: lighter;
     letter-spacing: 3px;
     font-family: avenir, sans-serif;
@@ -257,7 +365,6 @@ header{
 }
 
 .recent .tem_recent, .recent .tem_recent .a{
-    text-decoration: underline white;
     color: black;
     text-align: center;
     width: 300px;
@@ -267,18 +374,6 @@ header{
     margin: 30px 20px 30px 20px;
 }
 
-/*
-.recent .tem_recent h4{
-    text-decoration: none;
-    color: black;
-}
-
-.recent .tem_recent p{
-    text-decoration: underline white;
-    color: black;
-}
-*/
-
 .recent .tem_recent .drapeau{
     margin-top: 30px;
 }
@@ -287,43 +382,34 @@ header{
     width: 10px;
     height: 15px;
     border-radius: 5%;
-    background-color: #000000;
+    background-color: #e2e2e1;
 }
 
 .recent::-webkit-scrollbar-thumb {
-    background: #bf0436;
+    background: #000000;
 }
 
-
-/********************** footer ********************************/
+/**************************************** FOOTER  ***************************************************************************************************/
 
 footer{
-    overflow: hidden;
-    position: static;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    height: 50px;
-
+    height: 15vh;
     background-color: rgb(0, 0, 0);
     color: white;
-    text-decoration: none;
-
 }
 
 
 footer .lien{
     text-align: center;
-    margin: 15px;
+    margin: 20px;
+    position: relative;
+    top:45px
 }
 
 footer .lien a{
     margin: 10px;
-    text-decoration: none;
     color: white;
     padding-top: 5px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 footer .lien a:hover{
@@ -334,9 +420,64 @@ footer .lien a::before{
     content: "🔗";
 }
 
-/*************************************************************************************************************************************************/
+/**************************************** liste pays ***********************************************/
 
-/********************** À Propos et Redirection *************************/
+.pays{
+    background-image: url("image/fond_maroc.jpg");
+}
+
+.ordre{
+    position: relative;
+    top:150px
+}
+
+@media screen and (max-width: 900px) {
+
+    .ordre{
+        position: relative;
+        top:80px
+    }
+
+}
+
+
+.pays .ordre h2{
+    font-family: fraunces, serif;
+    margin: 45px 20px 0px 20px;
+
+}
+
+
+
+.lien_pays {
+    margin:10px 0px 10px 0;
+    padding: 10px 20px 5px 20px;
+    border-bottom: solid rgb(0, 0, 0) 1px;
+
+}
+
+
+.lien_pays a{
+    font-family: avenir, sans-serif;
+    margin: 0 ;
+    font-size: 18px;
+}
+
+.lien_pays a h4{
+    letter-spacing: 2px;
+    color: black;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.lien_pays a h4:hover{
+   color: #000000ca;
+   font-size: 20px;
+}
+
+
+/********************************** À Propos et Redirection *****************************************/
 
 .a_propos,.redirection{
     background-image: url("image/fond_maroc.jpg");
@@ -348,17 +489,13 @@ footer .lien a::before{
     font-family: fraunces, serif;
 }
 
-.a_propos .centre_a_propos{
-    margin: 100px 200px 100px 200px;
-    padding: 80px;
-    border: solid 1px;
-    border-radius: 10%;
+.centre_a_propos, .centre_redirection{
+    position: relative;
+    top:30vh;
 }
 
-.redirection .centre_redirection{
-    margin: 100px 200px 100px 200px;
-    padding: 80px;
-    border-radius: 10%;
+.a_propos .centre_a_propos p, .redirection .centre_redirection {
+    margin: 50px 200px 50px 200px;
 }
 
 .a_propos .centre_a_propos a, .redirection .centre_redirection a{
@@ -374,75 +511,37 @@ footer .lien a::before{
     border-bottom: solid rgb(62, 62, 62);
 }
 
+@media screen and (max-width: 900px) {
+    .a_propos .centre_a_propos p, .redirection .centre_redirection {
+        margin: 20px 50px 20px 50px;
+    }
 
-/******************************************************************************************************************************************************************************/
+    .centre_a_propos, .centre_redirection{
+        top:10vh;
+    }
 
-/****************************** CHOIX PAYS ********************************************/
-
-.pays{
-    /*background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("image/fond_maroc.jpg");*/
-    background-image: url("image/fond_maroc.jpg");
-    color: rgb(0, 0, 0);
-
-}
-/*
-.pays .top_bar nav a{
-    color: rgb(255, 255, 255);
-}
-
-.pays .top_bar .form {
-    color: rgb(255, 255, 255);
-    border: solid 1px rgb(255, 255, 255);
-}
-
-.pays .top_bar .form a{
-    color: white;
-}
-
-.pays .top_bar:hover{
-    background-color: black;
-}
-*/
-
-.pays .ordre h2{
-    font-family: fraunces, serif;
-    margin: 40px 10px 0px 15px;
-}
-
-
-
-.lien_pays {
-    margin:10px 0px 10px 0;
-    padding: 10px 20px 5px 20px;
-    border-bottom: solid rgb(0, 0, 0) 1px;
+    .a_propos .centre_a_propos a, .redirection .centre_redirection a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: none;
+        text-decoration: underline;
+    }
 
 }
 
 
-.lien_pays a{
-    text-decoration: none;
-    font-size: 18px;
-    font-family: avenir, sans-serif;
-    margin: 0 ;
-    font-size: 18px;
-}
-
-.lien_pays a h4{
-    letter-spacing: 2px;
-    color: black;
-    font-weight: 100;
-    text-transform: uppercase;
-
-}
-
-.lien_pays a h4:hover{
-   color: #000000ca;
-   font-size: 20px;
-}
 
 /********************************************** liste_temoignage  *****************************************************************/
 
+.titre{
+    position: relative;
+    top:70px
+}
+
+
 .titre h1{
+    font-size: 40px;
     font-family: fraunces, serif;
     text-align: center;
     font-weight: lighter;
@@ -454,7 +553,7 @@ footer .lien a::before{
     font-family: avenir, serif;
     text-align: center;
     font-weight: lighter;
-    margin: 20px 5px 40px auto ;
+    margin: 20px 30px 40px 30px ;
     letter-spacing: 1px;
 }
 
@@ -466,7 +565,7 @@ footer .lien a::before{
 .article{
     width: 350px;
     height: 200px;
-    margin: 35px;
+    margin: 20px;
     border: solid 1px black;
 }
 
@@ -489,19 +588,34 @@ footer .lien a::before{
 }
 
 .article h6{
-    margin: 20px 0 0 0;
+    margin: 40px 0 0 0;
     font-family: avenir,sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase ;
+    font-size: 12px;
 }
 
 .article p{
     font-size: 14px;
     font-family: avenir, sans-serif;
-    margin: auto 20px auto 20px;
+    margin:20px;
 }
 
 /******************* le temoignage en question ******************************/
+
+.haut{
+    position: fixed;
+    right: 60px;
+    top:650px;
+}
+
+@media screen and (max-width: 900px) {
+    .haut{
+        position: fixed;
+        right: 15px;
+        top:750px;
+    }
+}
 
 .qr_temoignage{
     background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("image/mur.jpg") ;
@@ -515,6 +629,8 @@ footer .lien a::before{
 .tem_titre{
     text-align: center;
     margin: 50px auto 80px auto;
+    position: relative;
+    top: 95px;
 }
 
 .tem_titre h1 {
@@ -522,8 +638,8 @@ footer .lien a::before{
     font-family: fraunces, serif;
     font-weight: 100;
     line-height: 100%;
-    margin-top: 10px ;
-    margin-bottom: 25px;
+    margin-top: 5px ;
+    margin-bottom: 5px;
 }
 
 .tem_titre h4 {
@@ -538,16 +654,19 @@ footer .lien a::before{
     font-weight: 300;
     font-family: caudex, sans-serif;
     font-size: 25px;
+    margin-bottom: 30px;
 }
 
 .qr{
     margin: 40px 25px 40px 25px;
 }
 
+
 .qr h3{
     font-family: caudex, serif;
     font-size: 22px;
     font-weight: 600;
+    margin: 20px auto;
 }
 
 .qr p{
@@ -558,89 +677,3 @@ footer .lien a::before{
     line-height: 32px;
 }
 
-/***********************************************   RESPONSIVE    *************************************************************************************/
-
-@media screen and (max-width:680px){
-    .centre h1{
-        font-size: 85px;
-    }
-
-    .presentation{
-        height: 675px;
-    }
-
-    .presentation p{
-        padding-left: 10%;
-        padding-right: 10%;
-        left:400px;
-        margin-bottom: 30px;
-    
-        font-size: 18px;
-    }
-
-    .lien_pre{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .prof , .tem{
-        margin: 10px 30px 10px 30px;
-    }
-
-    .top_bar nav a, .top_bar .form a{
-        font-size: 16px;
-        margin: 5px;
-    }
-
-    .footer .lien a{
-        margin:5px;
-    }
-
-    .a_propos .centre_a_propos, .redirection .centre_redirection{
-        margin: 20% 5% 20% 5%;
-        padding: 5px;
-        border: none;
-        font-size: 15px;
-    }
-}
-
-
-
-@media screen and (max-width:1050px) and (min-width:680px){
-    .presentation{
-        height: 450px;
-    } 
-
-    .presentation p{
-        padding-left: 10%;
-        padding-right: 10%;
-        left:400px;
-        margin-bottom: 30px;
-    
-        font-size: 16px;
-    }
-
-    .a_propos .centre_a_propos, .redirection .centre_redirection{
-        margin: 20% 5% 20% 5%;
-        padding: 10px;
-        border: none;
-        font-size: 18px;
-    }
-
-    header{
-        animation-duration: 5s ;
-    }
-
-    @keyframes diapo {
-        0%{
-        background-image: url("image/fond_maroc.jpg");
-        background-position: bottom;
-        }
-    
-        100%{
-        background-image: url("image/fond_maroc.jpg");
-        background-position: top;
-        }
-    }
-    
-}

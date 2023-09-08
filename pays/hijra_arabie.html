@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="**********************************">
     <title>Arabie-Saoudite | Témoignages-Hijra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../style.css">
 
@@ -17,23 +18,25 @@
 <body class="temoignage">
 
 
-    <section class="top_bar">
+    <section class="nav_bar">
+            
+        <a href="../redirection.html" class="form">Partager mon expérience</a>
 
-        <div class="form">
-            <a href="../redirection.html">Partager mon expérience</a>
-        </div>
-
-        <nav>
-            <a href="../index.html">Accueil</a>
-            <a href="../liste_pays.html">Pays</a>
-            <a href="../a_propos.html">À Propos</a>
+        <nav class="lien_nav">
+            <ul>
+                <li> <a href="../index.html">Accueil</a> </li> 
+                <li> <a href="../liste_pays.html" class="active">Pays</a> </li>
+                <li> <a href="../a_propos.html">À Propos</a> </li>
+            </ul>
         </nav>
+
+        <img src="../image/menu.png" class="menu">
 
     </section>
 
     <div class="titre">
-        <h1>Hijra en Arabie-Saoudite</h1>
-        <p>Loremipsum dolor sit amet consecte.tur adipisicing eli. Lorem ipsum dolor sit amet consectetur, adipisicing elit</p> 
+        <h1>Hijra en <br> Arabie-Saoudite</h1>
+        <p>Loremipsum dolor sit amet consecte.tur adipisicing eli. Lorem ipsum dolor sit amet consectetur, adipisicing elit <br><br></p> 
 
     </div>
 
@@ -47,7 +50,7 @@
             </div>
         </a>
     
-        <a href="tem_a_tay.html">
+        <a href="../redirection.html">
             <div class="article">
                 <h6>Makkah</h6>
                 <h2>Oumou Inaya</h2>
@@ -55,7 +58,7 @@
             </div>
         </a>
 
-        <a href="tem_o_ina.html">
+        <a href="../redirection.html">
             <div class="article">
                 <h6>Jeddah</h6>
                 <h2>Abou Salma</h2>
@@ -63,7 +66,7 @@
             </div>
         </a>
     
-        <a href="tem.html">
+        <a href="../redirection.html">
             <div class="article">
                 <h6>Ryadh</h6>
                 <h2>Oumou Ibrahim</h2>
@@ -71,7 +74,7 @@
             </div>
         </a>
 
-        <a href="tem">
+        <a href="../redirection.html">
             <div class="article">
                 <h6>Makkah</h6>
                 <h2>Abou AbdiLlah</h2>
@@ -79,7 +82,7 @@
             </div>
         </a>
     
-        <a href="tem">
+        <a href="../redirection.html">
             <div class="article">
                 <h6>Jeddah</h6>
                 <h2>Oumou Sawda</h2>
@@ -90,4 +93,14 @@
     </section> 
     
 </body>
+
+<script>
+    const menuHamburger = document.querySelector(".menu")
+    const navLinks = document.querySelector("nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>
