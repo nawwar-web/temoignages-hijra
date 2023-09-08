@@ -120,7 +120,8 @@ header{
         height: 100vh;
 
         background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);backdrop-filter: blur(7px);
+        /* backdrop-filter: blur(7px); */
 
         display: flex;
         justify-content: center;
