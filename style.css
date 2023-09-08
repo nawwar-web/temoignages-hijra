@@ -242,12 +242,12 @@ header .centre{
 @media screen and (max-width:900px){
 
     .presentation{
-        height: 60vh;
+        height: 600px;
         overflow: hidden;
     }
 
     .presentation .text {
-        top: 40px;
+        top: 90px;
     }
 
 }
