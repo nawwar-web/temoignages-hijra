@@ -80,8 +80,9 @@ header{
 }
 
 .form{
-    border: solid black 3px;
-    padding: 15px;
+    border: solid black 2px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .nav_bar nav ul li a, .form {
@@ -99,17 +100,30 @@ header{
 .menu{
     display: none;
     position: absolute;
-    left: 27px;
-    top: 17px;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+    left: 15px;
+    top: 23px;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
 }
 
 .mobile-menu{
     margin-left: 0;
 }
 
+@media screen and (max-width: 350px) {
+    .menu{
+        width:20px;
+        height: 20px;
+    }
+
+    .form{
+        border: solid black 2px;
+        padding: 5px;
+        font-size: 15px;    
+    }
+
+}
 
 @media screen and (max-width: 900px) {
     nav{
@@ -211,11 +225,19 @@ header .centre{
     }
 }
 
+@media screen and (max-width: 350px) {
+    .centre h1{
+        margin: 20px;
+        line-height: 100%;
+        font-size: 50px;
+    }
+}
+
 /***************************************************** PRESENTATION *****************************************************************/
 
 .presentation{
     background-color: #E5DBD9/*#E6DFD5*/;
-    height: 60vh;
+    height: 70vh;
     text-align: center;
 }
 
@@ -239,23 +261,23 @@ header .centre{
     margin: 30px 200px;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:950px){
 
     .presentation{
-        height: 600px;
+        height: 650px;
         overflow: hidden;
     }
 
     .presentation .text {
-        top: 90px;
+        top: 110px;
     }
 
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 700px){
 
     .presentation{
-        height: 80vh;
+        height: 70vh;
         overflow: hidden;
     }
 
@@ -267,8 +289,55 @@ header .centre{
         margin: 30px 40px
     }
 
-} 
+}
 
+@media screen and (max-width: 500px){
+
+    .presentation{
+        height: 70vh;
+    }
+
+    .presentation .text p{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .form{
+        border: solid black 2px;
+        padding: 10px;
+        font-size: 15px;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        right: 50px;
+        text-align: center;
+    }
+
+    .presentation{
+        height: 120vh;
+        overflow: hidden;
+    }
+
+}
+
+
+@media screen and (max-width: 390px) {
+    .presentation{
+        height: 80vh;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .presentation{
+        height: 130vh;
+        overflow: auto;
+    }
+
+}
 
 /** lien presentation **/
 
@@ -322,7 +391,8 @@ header .centre{
 
 .cases{
     background-color: rgb(255, 255, 255);
-    height: 625px;
+   /* height: 625px;*/
+   height: 300px;
     width: auto;
     overflow: hidden;
     text-align: center;
@@ -400,6 +470,18 @@ footer{
     background-color: rgb(0, 0, 0);
     color: white;
 }
+@media screen and (max-width: 700px){
+
+    footer{
+        height: 20vh;
+        font-size: 8px;
+    }
+
+    footer .lien{
+        text-align: center;
+        top:15px
+    }
+}
 
 
 footer .lien{
@@ -423,6 +505,7 @@ footer .lien a:hover{
 footer .lien a::before{
     content: "🔗";
 }
+
 
 /**************************************** liste pays ***********************************************/
 
@@ -487,6 +570,8 @@ footer .lien a::before{
     background-image: url("image/fond_maroc.jpg");
     text-align: center;
 
+    height: 120vh;
+
 }
 
 .a_propos h1, .redirection h1{
@@ -505,8 +590,8 @@ footer .lien a::before{
 .a_propos .centre_a_propos a, .redirection .centre_redirection a{
     text-decoration: none;
     color:rgb(19, 19, 19);
-    border-bottom: solid rgb(19, 19, 19);
-    padding-top: 15px;
+    border-bottom: solid 2px rgb(19, 19, 19);
+    margin-top: 15px;
     margin-right: 20px;
 }
 
